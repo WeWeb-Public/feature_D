@@ -48,35 +48,34 @@
 			</li>
 		</ul>
 		<wwObject v-bind:ww-object="section.data.title"></wwObject>
+		<wwObject v-bind:ww-object="section.data.title"></wwObject>
 	</div>
 </template>
 
 <script>
 let a = {
-	name: "feature_D",
-	props: {
-		msg: String,
-		section: Object
-	},
-	methods: {
-		lala: function () {
-			console.log("lala");
-		}
-	}
+  name: "feature_D",
+  props: {
+    msg: String,
+    section: Object
+  },
+  methods: {
+    lala: function() {
+      console.log("lala");
+    }
+  }
 };
 
 /* wwManager:start */
 const managerFunctions = require("./manager.js").default;
 for (const key in managerFunctions) {
-	if (a.methods[key]) {
-		console.log("Function already exists : ", key);
-	} else {
-		a.methods[key] = managerFunctions[key];
-	}
+  if (a.methods[key]) {
+    console.log("Function already exists : ", key);
+  } else {
+    a.methods[key] = managerFunctions[key];
+  }
 }
 /* wwManager:end */
-
-console.log(a.methods);
 
 export default a;
 </script>
