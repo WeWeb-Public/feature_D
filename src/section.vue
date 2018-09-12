@@ -266,7 +266,7 @@ export default {
 			var parentOffset = c.parentElement.getBoundingClientRect();
 
 			var x = (event.pageX - parentOffset.left) / c.getBoundingClientRect().width * 2 - 1;
-			var y = (event.pageY - parentOffset.top) / c.getBoundingClientRect().height;
+			var y = (event.pageY - window.scrollY - parentOffset.top) / c.getBoundingClientRect().height;
 
 			var rX = -y * 2 * factor;
 			var rY = x * 2 * factor + offset;
