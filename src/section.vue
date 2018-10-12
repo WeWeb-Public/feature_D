@@ -1,7 +1,7 @@
 <template>
 
 	<div class="feature_D">
-		<wwObject class="background" v-bind:ww-object="section.data.background" ww-category="background">
+		<wwObject class="background" v-bind:ww-object-ref="section.data.background" ww-category="background">
 		</wwObject>
 		<div class="content">
 			<div class="title-container">
@@ -34,7 +34,7 @@
 				</svg>
 				<div class="title" v-ww-vertical-align>
 					oiuhqeiçugdqizfugsiegfsgief
-					<wwObject v-bind:ww-object="section.data.title" ww-default-object-type="ww-text"></wwObject>
+					<wwObject v-bind:ww-object-ref="section.data.title" ww-default-object-type="ww-text"></wwObject>
 				</div>
 			</div>
 			<div class="card-container container">
@@ -44,11 +44,11 @@
 						<div class="card" v-on:click="wwOnClickCard" data-card="1" ng-class="{'flipped':cardStatus[0].flipped}">
 							<div class="card-content front">
 
-								<wwObject class="background" v-bind:ww-object="section.data.card1Bg" ww-category="background">
+								<wwObject class="background" v-bind:ww-object-ref="section.data.card1Bg" ww-category="background">
 								</wwObject>
 
 								<div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[0]" :key="wwObject.uniqueId">
-									<wwObject v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
+									<wwObject v-bind:ww-object-ref="wwObject" ww-default-object-type="ww-text"></wwObject>
 								</div>
 
 								<div class="handle-container">
@@ -62,11 +62,11 @@
 							</div>
 
 							<div class="card-content back">
-								<wwObject class="background" v-bind:ww-object="section.data.card4Bg" ww-category="background">
+								<wwObject class="background" v-bind:ww-object-ref="section.data.card4Bg" ww-category="background">
 								</wwObject>
 
 								<div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[3]" :key="wwObject.uniqueId">
-									<wwObject v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
+									<wwObject v-bind:ww-object-ref="wwObject" ww-default-object-type="ww-text"></wwObject>
 								</div>
 
 							</div>
@@ -80,11 +80,11 @@
 						<div class="card-string"></div>
 						<div class="card" v-on:click="wwOnClickCard" data-card="2" ng-class="{'flipped':cardStatus[1].flipped}">
 							<div class="card-content front">
-								<wwObject class="background" v-bind:ww-object="section.data.card2Bg" ww-category="background">
+								<wwObject class="background" v-bind:ww-object-ref="section.data.card2Bg" ww-category="background">
 								</wwObject>
 
 								<div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[1]" :key="wwObject.uniqueId">
-									<wwObject v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
+									<wwObject v-bind:ww-object-ref="wwObject" ww-default-object-type="ww-text"></wwObject>
 								</div>
 
 								<div class="handle-container">
@@ -97,11 +97,11 @@
 
 							</div>
 							<div class="card-content back">
-								<wwObject class="background" v-bind:ww-object="section.data.card5Bg" ww-category="background">
+								<wwObject class="background" v-bind:ww-object-ref="section.data.card5Bg" ww-category="background">
 								</wwObject>
 
 								<div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[4]" :key="wwObject.uniqueId">
-									<wwObject v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
+									<wwObject v-bind:ww-object-ref="wwObject" ww-default-object-type="ww-text"></wwObject>
 								</div>
 
 							</div>
@@ -114,11 +114,11 @@
 						<div class="card-string"></div>
 						<div class="card" v-on:click="wwOnClickCard" data-card="3" ng-class="{'flipped':cardStatus[2].flipped}">
 							<div class="card-content front">
-								<wwObject class="background" v-bind:ww-object="section.data.card3Bg" ww-category="background">
+								<wwObject class="background" v-bind:ww-object-ref="section.data.card3Bg" ww-category="background">
 								</wwObject>
 
 								<div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[2]" :key="wwObject.uniqueId">
-									<wwObject v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
+									<wwObject v-bind:ww-object-ref="wwObject" ww-default-object-type="ww-text"></wwObject>
 								</div>
 
 								<div class="handle-container">
@@ -131,11 +131,11 @@
 
 							</div>
 							<div class="card-content back">
-								<wwObject class="background" v-bind:ww-object="section.data.card6Bg" ww-category="background">
+								<wwObject class="background" v-bind:ww-object-ref="section.data.card6Bg" ww-category="background">
 								</wwObject>
 
 								<div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[5]" :key="wwObject.uniqueId">
-									<wwObject v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
+									<wwObject v-bind:ww-object-ref="wwObject" ww-default-object-type="ww-text"></wwObject>
 								</div>
 
 							</div>
