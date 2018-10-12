@@ -3,7 +3,6 @@
 	<div class="feature_D">
 		<wwObject class="background" v-bind:ww-object="section.data.background" ww-category="background">
 		</wwObject>
-
 		<div class="content">
 			<div class="title-container">
 				<svg class="blob" preserveAspectRatio="none" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" viewBox="0 0 1284 252">
@@ -34,6 +33,7 @@
 					</g>
 				</svg>
 				<div class="title" v-ww-vertical-align>
+					oiuhqeiçugdqizfugsiegfsgief
 					<wwObject v-bind:ww-object="section.data.title" ww-default-object-type="ww-text"></wwObject>
 				</div>
 			</div>
@@ -149,69 +149,19 @@
 		</div>
 
 	</div>
-
-	<!--
-	<div class="hello">
-		<h1>Bonjour Section Feature_D ! :D :)</h1>
-		<p>
-			For guide and recipes on how to configure / customize this project,<br> check out the
-			<a href="https://github.com/vuejs/vue-cli/tree/dev/docs" target="_blank">vue-cli documentation</a>.
-		</p>
-		<h3>Installed CLI Plugins coucou</h3>
-		<ul>
-			<li>
-				<a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank">babel</a>
-			</li>
-			<li>
-				<a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank">eslint</a>
-			</li>
-		</ul>
-		<h3>Essential Links</h3>
-		<ul>
-			<li>
-				<a href="https://vuejs.org" target="_blank">Core Docs</a>
-			</li>
-			<li>
-				<a href="https://forum.vuejs.org" target="_blank">Forum</a>
-			</li>
-			<li>
-				<a href="https://chat.vuejs.org" target="_blank">Community Chat</a>
-			</li>
-			<li>
-				<a href="https://twitter.com/vuejs" target="_blank">Twitter</a>
-			</li>
-		</ul>
-		<h3 @click="lala">Ecosystem</h3>
-		<ul>
-			<li>
-				<a href="https://router.vuejs.org/en/essentials/getting-started.html" target="_blank">vue-router</a>
-			</li>
-			<li>
-				<a href="https://vuex.vuejs.org/en/intro.html" target="_blank">vuex</a>
-			</li>
-			<li>
-				<a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank">vue-devtools</a>
-			</li>
-			<li>
-				<a href="https://vue-loader.vuejs.org" target="_blank">vue-loader</a>
-			</li>
-			<li>
-				<a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a>
-			</li>
-		</ul>
-		<wwObject v-bind:ww-object="section.data.title"></wwObject>
-		<wwObject v-bind:ww-object="section.data.card4Bg" ww-category="background" style="height: 300px"></wwObject>
-
-		<wwObject v-for="wwObject in section.data.cardsWwObject[0]" :key="wwObject.uniqueId" v-bind:ww-object="wwObject"></wwObject>
-	</div>
-	-->
 </template>
 
 <script>
 export default {
 	name: "feature_D",
 	props: {
-		section: Object
+		sectionRef: Object
+	},
+	computed: {
+		section() {
+			//return this.sectionRef.wwGet();
+			return this.$store.state.sections[this.sectionRef.id];
+		}
 	},
 	methods: {
 		wwOnScroll: function () {
