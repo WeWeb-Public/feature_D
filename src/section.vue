@@ -1,365 +1,370 @@
 <template>
 
-	<div class="feature_D">
-		<wwObject class="background" v-bind:ww-object="section.data.background" ww-category="background">
-		</wwObject>
-		<div class="content">
-			<div class="title-container">
-				<svg class="blob" preserveAspectRatio="none" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" viewBox="0 0 1284 252">
-					<metadata id="metadata62">
-						<rdf:RDF>
-							<cc:Work rdf:about="">
-								<dc:format>image/svg+xml</dc:format>
-								<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-								<dc:title>Rectangle 7</dc:title>
-							</cc:Work>
-						</rdf:RDF>
-					</metadata>
-					<defs id="defs49">
-						<path d="m 0,0 h 1215 c 39.3333,74.006803 39.3333,131.0068 0,171 -59,59.9898 -395.19294,50 -587.08333,50 C 499.98974,221 290.68418,208 0,182 Z" id="path-1" inkscape:connector-curvature="0" />
-						<filter x="-0.051999997" y="-0.33200002" width="1.104" height="1.582" filterUnits="objectBoundingBox" id="filter-2">
-							<feOffset dx="0" dy="-9" in="SourceAlpha" result="shadowOffsetOuter1" id="feOffset42" />
-							<feGaussianBlur stdDeviation="20" in="shadowOffsetOuter1" result="shadowBlurOuter1" id="feGaussianBlur44" />
-							<feColorMatrix values="0 0 0 0 0.443137255   0 0 0 0 0.48627451   0 0 0 0 0.537254902  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" id="feColorMatrix46" />
-						</filter>
-					</defs>
-					<g id="01---Webeo---Desktop" transform="translate(0,-995)" style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1">
-						<g id="Group" transform="translate(0,995)">
-							<g id="Rectangle-7">
-								<use xlink:href="#path-1" id="use51" style="fill:#000000;fill-opacity:1;filter:url(#filter-2)" x="0" y="0" width="100%" height="100%" />
-								<use xlink:href="#path-1" id="use53" style="fill:#ffffff;fill-rule:evenodd" x="0" y="0" width="100%" height="100%" />
-							</g>
-						</g>
-					</g>
-				</svg>
-				<div class="title" v-ww-vertical-align>
-					<wwObject v-bind:ww-object="section.data.title" ww-default-object-type="ww-text"></wwObject>
-				</div>
-			</div>
-			<div class="card-container container">
-				<div class="card-column">
-					<div class="card-outter card-1">
-						<div class="card-string"></div>
-						<div class="card" v-on:click="wwOnClickCard" data-card="1" ng-class="{'flipped':cardStatus[0].flipped}">
-							<div class="card-content front">
+    <div class="feature_D">
 
-								<wwObject class="background" v-bind:ww-object="section.data.card1Bg" ww-category="background">
-								</wwObject>
+        <!-- wwManager:start -->
+        <wwSectionEditMenu v-bind:section="section"></wwSectionEditMenu>
+        <!-- wwManager:end -->
 
-								<div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[0]" :key="wwObject.uniqueId">
-									<wwObject v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
-								</div>
+        <wwObject class="background" v-bind:ww-object="section.data.background" v-bind:section="section" ww-category="background">
+        </wwObject>
+        <div class="content">
+            <div class="title-container">
+                <svg class="blob" preserveAspectRatio="none" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" viewBox="0 0 1284 252">
+                    <metadata id="metadata62">
+                        <rdf:RDF>
+                            <cc:Work rdf:about="">
+                                <dc:format>image/svg+xml</dc:format>
+                                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                                <dc:title>Rectangle 7</dc:title>
+                            </cc:Work>
+                        </rdf:RDF>
+                    </metadata>
+                    <defs id="defs49">
+                        <path d="m 0,0 h 1215 c 39.3333,74.006803 39.3333,131.0068 0,171 -59,59.9898 -395.19294,50 -587.08333,50 C 499.98974,221 290.68418,208 0,182 Z" id="path-1" inkscape:connector-curvature="0" />
+                        <filter x="-0.051999997" y="-0.33200002" width="1.104" height="1.582" filterUnits="objectBoundingBox" id="filter-2">
+                            <feOffset dx="0" dy="-9" in="SourceAlpha" result="shadowOffsetOuter1" id="feOffset42" />
+                            <feGaussianBlur stdDeviation="20" in="shadowOffsetOuter1" result="shadowBlurOuter1" id="feGaussianBlur44" />
+                            <feColorMatrix values="0 0 0 0 0.443137255   0 0 0 0 0.48627451   0 0 0 0 0.537254902  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" id="feColorMatrix46" />
+                        </filter>
+                    </defs>
+                    <g id="01---Webeo---Desktop" transform="translate(0,-995)" style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1">
+                        <g id="Group" transform="translate(0,995)">
+                            <g id="Rectangle-7">
+                                <use xlink:href="#path-1" id="use51" style="fill:#000000;fill-opacity:1;filter:url(#filter-2)" x="0" y="0" width="100%" height="100%" />
+                                <use xlink:href="#path-1" id="use53" style="fill:#ffffff;fill-rule:evenodd" x="0" y="0" width="100%" height="100%" />
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <div class="title" v-ww-vertical-align>
+                    <wwObject v-bind:ww-object="section.data.title" v-bind:section="section" ww-default-object-type="ww-text"></wwObject>
+                </div>
+            </div>
+            <div class="card-container container">
+                <div class="card-column">
+                    <div class="card-outter card-1">
+                        <div class="card-string"></div>
+                        <div class="card" v-on:click="wwOnClickCard" data-card="1" ng-class="{'flipped':cardStatus[0].flipped}">
+                            <div class="card-content front">
 
-								<div class="handle-container">
-									<div class="handle" v-bind:style="section.data.handleGradient">
-										<div class="handle-pulse handle-pulse-1"></div>
-										<div class="handle-pulse handle-pulse-2"></div>
-										<div class="handle-pulse handle-pulse-3"></div>
-									</div>
-								</div>
+                                <wwObject class="background" v-bind:ww-object="section.data.card1Bg" v-bind:section="section" ww-category="background">
+                                </wwObject>
 
-							</div>
+                                <div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[0]" :key="wwObject.uniqueId">
+                                    <wwObject v-bind:ww-object="wwObject" v-bind:section="section" ww-default-object-type="ww-text"></wwObject>
+                                </div>
 
-							<div class="card-content back">
-								<wwObject class="background" v-bind:ww-object="section.data.card4Bg" ww-category="background">
-								</wwObject>
+                                <div class="handle-container">
+                                    <div class="handle" v-bind:style="section.data.handleGradient">
+                                        <div class="handle-pulse handle-pulse-1"></div>
+                                        <div class="handle-pulse handle-pulse-2"></div>
+                                        <div class="handle-pulse handle-pulse-3"></div>
+                                    </div>
+                                </div>
 
-								<div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[3]" :key="wwObject.uniqueId">
-									<wwObject v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
-								</div>
+                            </div>
 
-							</div>
-						</div>
+                            <div class="card-content back">
+                                <wwObject class="background" v-bind:ww-object="section.data.card4Bg" v-bind:section="section" ww-category="background">
+                                </wwObject>
 
-					</div>
-				</div>
+                                <div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[3]" :key="wwObject.uniqueId">
+                                    <wwObject v-bind:ww-object="wwObject" v-bind:section="section" ww-default-object-type="ww-text"></wwObject>
+                                </div>
 
-				<div class="card-column">
-					<div class="card-outter card-2">
-						<div class="card-string"></div>
-						<div class="card" v-on:click="wwOnClickCard" data-card="2" ng-class="{'flipped':cardStatus[1].flipped}">
-							<div class="card-content front">
-								<wwObject class="background" v-bind:ww-object="section.data.card2Bg" ww-category="background">
-								</wwObject>
+                            </div>
+                        </div>
 
-								<div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[1]" :key="wwObject.uniqueId">
-									<wwObject v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
-								</div>
+                    </div>
+                </div>
 
-								<div class="handle-container">
-									<div class="handle" v-bind:style="section.data.handleGradient">
-										<div class="handle-pulse handle-pulse-1"></div>
-										<div class="handle-pulse handle-pulse-2"></div>
-										<div class="handle-pulse handle-pulse-3"></div>
-									</div>
-								</div>
+                <div class="card-column">
+                    <div class="card-outter card-2">
+                        <div class="card-string"></div>
+                        <div class="card" v-on:click="wwOnClickCard" data-card="2" ng-class="{'flipped':cardStatus[1].flipped}">
+                            <div class="card-content front">
+                                <wwObject class="background" v-bind:ww-object="section.data.card2Bg" v-bind:section="section" ww-category="background">
+                                </wwObject>
 
-							</div>
-							<div class="card-content back">
-								<wwObject class="background" v-bind:ww-object="section.data.card5Bg" ww-category="background">
-								</wwObject>
+                                <div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[1]" :key="wwObject.uniqueId">
+                                    <wwObject v-bind:ww-object="wwObject" v-bind:section="section" ww-default-object-type="ww-text"></wwObject>
+                                </div>
 
-								<div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[4]" :key="wwObject.uniqueId">
-									<wwObject v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
-								</div>
+                                <div class="handle-container">
+                                    <div class="handle" v-bind:style="section.data.handleGradient">
+                                        <div class="handle-pulse handle-pulse-1"></div>
+                                        <div class="handle-pulse handle-pulse-2"></div>
+                                        <div class="handle-pulse handle-pulse-3"></div>
+                                    </div>
+                                </div>
 
-							</div>
-						</div>
-					</div>
-				</div>
+                            </div>
+                            <div class="card-content back">
+                                <wwObject class="background" v-bind:ww-object="section.data.card5Bg" v-bind:section="section" ww-category="background">
+                                </wwObject>
 
-				<div class="card-column">
-					<div class="card-outter card-3">
-						<div class="card-string"></div>
-						<div class="card" v-on:click="wwOnClickCard" data-card="3" ng-class="{'flipped':cardStatus[2].flipped}">
-							<div class="card-content front">
-								<wwObject class="background" v-bind:ww-object="section.data.card3Bg" ww-category="background">
-								</wwObject>
+                                <div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[4]" :key="wwObject.uniqueId">
+                                    <wwObject v-bind:ww-object="wwObject" v-bind:section="section" ww-default-object-type="ww-text"></wwObject>
+                                </div>
 
-								<div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[2]" :key="wwObject.uniqueId">
-									<wwObject v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
-								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-								<div class="handle-container">
-									<div class="handle" v-bind:style="section.data.handleGradient">
-										<div class="handle-pulse handle-pulse-1"></div>
-										<div class="handle-pulse handle-pulse-2"></div>
-										<div class="handle-pulse handle-pulse-3"></div>
-									</div>
-								</div>
+                <div class="card-column">
+                    <div class="card-outter card-3">
+                        <div class="card-string"></div>
+                        <div class="card" v-on:click="wwOnClickCard" data-card="3" ng-class="{'flipped':cardStatus[2].flipped}">
+                            <div class="card-content front">
+                                <wwObject class="background" v-bind:ww-object="section.data.card3Bg" v-bind:section="section" ww-category="background">
+                                </wwObject>
 
-							</div>
-							<div class="card-content back">
-								<wwObject class="background" v-bind:ww-object="section.data.card6Bg" ww-category="background">
-								</wwObject>
+                                <div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[2]" :key="wwObject.uniqueId">
+                                    <wwObject v-bind:ww-object="wwObject" v-bind:section="section" ww-default-object-type="ww-text"></wwObject>
+                                </div>
 
-								<div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[5]" :key="wwObject.uniqueId">
-									<wwObject v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
-								</div>
+                                <div class="handle-container">
+                                    <div class="handle" v-bind:style="section.data.handleGradient">
+                                        <div class="handle-pulse handle-pulse-1"></div>
+                                        <div class="handle-pulse handle-pulse-2"></div>
+                                        <div class="handle-pulse handle-pulse-3"></div>
+                                    </div>
+                                </div>
 
-							</div>
-						</div>
-					</div>
-				</div>
+                            </div>
+                            <div class="card-content back">
+                                <wwObject class="background" v-bind:ww-object="section.data.card6Bg" v-bind:section="section" ww-category="background">
+                                </wwObject>
 
-				<div class="clearfix"></div>
+                                <div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[5]" :key="wwObject.uniqueId">
+                                    <wwObject v-bind:ww-object="wwObject" v-bind:section="section" ww-default-object-type="ww-text"></wwObject>
+                                </div>
 
-			</div>
-		</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-	</div>
+                <div class="clearfix"></div>
+
+            </div>
+        </div>
+
+    </div>
 </template>
 
 <script>
 export default {
-	name: "feature_D",
-	props: {
-		section: Object
-	},
-	computed: {
-	},
-	methods: {
-		wwOnScroll: function () {
-			if (this.wwAnimStarted) {
-				return;
-			}
+    name: "feature_D",
+    props: {
+        section: Object
+    },
+    computed: {
+    },
+    methods: {
+        wwOnScroll: function () {
+            if (this.wwAnimStarted) {
+                return;
+            }
 
-			var scrollTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
-			var sectionTop = this.$el.getBoundingClientRect().top;
+            var scrollTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+            var sectionTop = this.$el.getBoundingClientRect().top;
 
-			if (scrollTop >= sectionTop - window.innerHeight / 4) {
-				this.wwRunAnim();
-			}
+            if (scrollTop >= sectionTop - window.innerHeight / 4) {
+                this.wwRunAnim();
+            }
 
-		},
-		wwRunAnim: function () {
-			this.wwAnimStarted = true;
+        },
+        wwRunAnim: function () {
+            this.wwAnimStarted = true;
 
-			const self = this;
+            const self = this;
 
-			self.$el.querySelector('.card-1').classList.add('animate');
+            self.$el.querySelector('.card-1').classList.add('animate');
 
-			setTimeout(function () {
-				self.$el.querySelector('.card-2').classList.add('animate');
+            setTimeout(function () {
+                self.$el.querySelector('.card-2').classList.add('animate');
 
-				setTimeout(function () {
-					self.$el.querySelector('.card-3').classList.add('animate');
-				}, 300);
+                setTimeout(function () {
+                    self.$el.querySelector('.card-3').classList.add('animate');
+                }, 300);
 
-			}, 300);
+            }, 300);
 
-		},
-		wwOnMousemove: function (event, factor) {
-			factor = factor || 1;
-			var offset = 0;
+        },
+        wwOnMousemove: function (event, factor) {
+            factor = factor || 1;
+            var offset = 0;
 
-			var c = (event.target || event.srcElement).closest('.card');
+            var c = (event.target || event.srcElement).closest('.card');
 
-			var index = 0;
+            var index = 0;
 
-			if (c.getAttribute("data-card") == "2") {
-				index = 1;
-			}
-			if (c.getAttribute("data-card") == "3") {
-				index = 2;
-			}
+            if (c.getAttribute("data-card") == "2") {
+                index = 1;
+            }
+            if (c.getAttribute("data-card") == "3") {
+                index = 2;
+            }
 
-			if (this.cardStatus[index].flipped) {
-				offset = 180;
-			}
+            if (this.cardStatus[index].flipped) {
+                offset = 180;
+            }
 
-			var parentOffset = c.parentElement.getBoundingClientRect();
+            var parentOffset = c.parentElement.getBoundingClientRect();
 
-			var x = (event.pageX - parentOffset.left) / c.getBoundingClientRect().width * 2 - 1;
-			var y = (event.pageY - window.scrollY - parentOffset.top) / c.getBoundingClientRect().height;
+            var x = (event.pageX - parentOffset.left) / c.getBoundingClientRect().width * 2 - 1;
+            var y = (event.pageY - window.scrollY - parentOffset.top) / c.getBoundingClientRect().height;
 
-			var rX = -y * 2 * factor;
-			var rY = x * 2 * factor + offset;
+            var rX = -y * 2 * factor;
+            var rY = x * 2 * factor + offset;
 
-			//c.css("-webkit-transition", "");
-			//c.css("-moz-transition", "");
-			//c.css("-o-transition", "");
-			c.style.transition = "";
+            //c.css("-webkit-transition", "");
+            //c.css("-moz-transition", "");
+            //c.css("-o-transition", "");
+            c.style.transition = "";
 
-			//c.css("-webkit-transform", "perspective(600px) rotateX(" + rX + "deg) rotateY(" + rY + "deg)");
-			//c.css("-moz-transform", "perspective(600px) rotateX(" + rX + "deg) rotateY(" + rY + "deg)");
-			//c.css("-o-transform", "perspective(600px) rotateX(" + rX + "deg) rotateY(" + rY + "deg)");
-			c.style.transform = "perspective(600px) rotateX(" + rX + "deg) rotateY(" + rY + "deg)";
+            //c.css("-webkit-transform", "perspective(600px) rotateX(" + rX + "deg) rotateY(" + rY + "deg)");
+            //c.css("-moz-transform", "perspective(600px) rotateX(" + rX + "deg) rotateY(" + rY + "deg)");
+            //c.css("-o-transform", "perspective(600px) rotateX(" + rX + "deg) rotateY(" + rY + "deg)");
+            c.style.transform = "perspective(600px) rotateX(" + rX + "deg) rotateY(" + rY + "deg)";
 
-		},
-		wwOnMouseout: function (event) {
-			var offset = 0;
+        },
+        wwOnMouseout: function (event) {
+            var offset = 0;
 
-			var c = (event.target || event.srcElement).closest('.card');
+            var c = (event.target || event.srcElement).closest('.card');
 
-			var index = 0;
+            var index = 0;
 
-			if (c.getAttribute("data-card") == "2") {
-				index = 1;
-			}
-			if (c.getAttribute("data-card") == "3") {
-				index = 2;
-			}
+            if (c.getAttribute("data-card") == "2") {
+                index = 1;
+            }
+            if (c.getAttribute("data-card") == "3") {
+                index = 2;
+            }
 
-			if (this.cardStatus[index].flipped) {
-				offset = 180;
-			}
+            if (this.cardStatus[index].flipped) {
+                offset = 180;
+            }
 
-			//c.css("-webkit-transition", "all 0.3s ease");
-			//c.css("-moz-transition", "all 0.3s ease");
-			//c.css("-o-transition", "all 0.3s ease");
-			c.style.transition = "all 0.3s ease";
+            //c.css("-webkit-transition", "all 0.3s ease");
+            //c.css("-moz-transition", "all 0.3s ease");
+            //c.css("-o-transition", "all 0.3s ease");
+            c.style.transition = "all 0.3s ease";
 
-			//c.css("-webkit-transform", "perspective(600px) rotateX(0deg) rotateY( " + offset + "deg)");
-			//c.css("-moz-transform", "perspective(600px) rotateX(0deg) rotateY( " + offset + "deg)");
-			//c.css("-o-transform", "perspective(600px) rotateX(0deg) rotateY( " + offset + "deg)");
-			c.style.transform = "perspective(600px) rotateX(0deg) rotateY( " + offset + "deg)";
-		},
-		wwOnClickCard: function (event) {
+            //c.css("-webkit-transform", "perspective(600px) rotateX(0deg) rotateY( " + offset + "deg)");
+            //c.css("-moz-transform", "perspective(600px) rotateX(0deg) rotateY( " + offset + "deg)");
+            //c.css("-o-transform", "perspective(600px) rotateX(0deg) rotateY( " + offset + "deg)");
+            c.style.transform = "perspective(600px) rotateX(0deg) rotateY( " + offset + "deg)";
+        },
+        wwOnClickCard: function (event) {
 
-			var c = (event.target || event.srcElement).closest('.card');
+            var c = (event.target || event.srcElement).closest('.card');
 
-			var index = 0;
+            var index = 0;
 
-			if (c.getAttribute("data-card") == "2") {
-				index = 1;
-			}
-			if (c.getAttribute("data-card") == "3") {
-				index = 2;
-			}
+            if (c.getAttribute("data-card") == "2") {
+                index = 1;
+            }
+            if (c.getAttribute("data-card") == "3") {
+                index = 2;
+            }
 
-			var parentOffset = c.parentElement.getBoundingClientRect();
+            var parentOffset = c.parentElement.getBoundingClientRect();
 
-			var x = (event.pageX - parentOffset.left) / c.getBoundingClientRect().width * 2 - 1;
+            var x = (event.pageX - parentOffset.left) / c.getBoundingClientRect().width * 2 - 1;
 
-			c.removeEventListener("mousemove", this.wwOnMousemove);
-			c.removeEventListener("mouseout", this.wwOnMouseout);
+            c.removeEventListener("mousemove", this.wwOnMousemove);
+            c.removeEventListener("mouseout", this.wwOnMouseout);
 
-			//c.css("-webkit-transition", "1s all ease");
-			//c.css("-moz-transition", "1s all ease");
-			//c.css("-o-transition", "1s all ease");
-			c.style.transition = "1s all ease";
+            //c.css("-webkit-transition", "1s all ease");
+            //c.css("-moz-transition", "1s all ease");
+            //c.css("-o-transition", "1s all ease");
+            c.style.transition = "1s all ease";
 
-			var offset = 0;
-			if (!this.cardStatus[index].flipped) {
-				offset = 180;
-			}
+            var offset = 0;
+            if (!this.cardStatus[index].flipped) {
+                offset = 180;
+            }
 
-			if (x > 0) {
-				//c.css("-webkit-transform", "perspective(600px) rotateY(" + (-offset) + "deg)");
-				//c.css("-moz-transform", "perspective(600px) rotateY(" + (-offset) + "deg)");
-				//c.css("-o-transform", "perspective(600px) rotateY(" + (-offset) + "deg)");
-				c.style.transform = "perspective(600px) rotateY(" + (-offset) + "deg)";
-			}
-			else {
-				//c.css("-webkit-transform", "perspective(600px) rotateY(" + offset + "deg)");
-				//c.css("-moz-transform", "perspective(600px) rotateY(" + offset + "deg)");
-				//c.css("-o-transform", "perspective(600px) rotateY(" + offset + "deg)");
-				c.style.transform = "perspective(600px) rotateY(" + offset + "deg)";
-			}
+            if (x > 0) {
+                //c.css("-webkit-transform", "perspective(600px) rotateY(" + (-offset) + "deg)");
+                //c.css("-moz-transform", "perspective(600px) rotateY(" + (-offset) + "deg)");
+                //c.css("-o-transform", "perspective(600px) rotateY(" + (-offset) + "deg)");
+                c.style.transform = "perspective(600px) rotateY(" + (-offset) + "deg)";
+            }
+            else {
+                //c.css("-webkit-transform", "perspective(600px) rotateY(" + offset + "deg)");
+                //c.css("-moz-transform", "perspective(600px) rotateY(" + offset + "deg)");
+                //c.css("-o-transform", "perspective(600px) rotateY(" + offset + "deg)");
+                c.style.transform = "perspective(600px) rotateY(" + offset + "deg)";
+            }
 
-			this.cardStatus[index].flipped = !this.cardStatus[index].flipped;
+            this.cardStatus[index].flipped = !this.cardStatus[index].flipped;
 
-			const self = this;
+            const self = this;
 
-			setTimeout(function () {
-				c.addEventListener("mousemove", self.wwOnMousemove);
-				c.addEventListener("mouseout", self.wwOnMouseout);
-			}, 1050)
+            setTimeout(function () {
+                c.addEventListener("mousemove", self.wwOnMousemove);
+                c.addEventListener("mouseout", self.wwOnMouseout);
+            }, 1050)
 
-		}
-	},
-	beforeDestroy: function () {
-		window.removeEventListener('scroll', this.wwOnScroll);
+        }
+    },
+    beforeDestroy: function () {
+        window.removeEventListener('scroll', this.wwOnScroll);
 
-		this.$el.querySelector(".card-1 .card").removeEventListener("mousemove", this.wwOnMousemove);
-		this.$el.querySelector(".card-1 .card").removeEventListener("mouseout", this.wwOnMouseout);
+        this.$el.querySelector(".card-1 .card").removeEventListener("mousemove", this.wwOnMousemove);
+        this.$el.querySelector(".card-1 .card").removeEventListener("mouseout", this.wwOnMouseout);
 
-		this.$el.querySelector(".card-2 .card").removeEventListener("mousemove", this.wwOnMousemove);
-		this.$el.querySelector(".card-2 .card").removeEventListener("mouseout", this.wwOnMouseout);
+        this.$el.querySelector(".card-2 .card").removeEventListener("mousemove", this.wwOnMousemove);
+        this.$el.querySelector(".card-2 .card").removeEventListener("mouseout", this.wwOnMouseout);
 
-		this.$el.querySelector(".card-3 .card").removeEventListener("mousemove", this.wwOnMousemove);
-		this.$el.querySelector(".card-3 .card").removeEventListener("mouseout", this.wwOnMouseout);
-	},
-	created: function () {
+        this.$el.querySelector(".card-3 .card").removeEventListener("mousemove", this.wwOnMousemove);
+        this.$el.querySelector(".card-3 .card").removeEventListener("mouseout", this.wwOnMouseout);
+    },
+    created: function () {
 
-		this.cardStatus = [{
-			flipped: false
-		}, {
-			flipped: false
-		}, {
-			flipped: false
-		},
-		]
+        this.cardStatus = [{
+            flipped: false
+        }, {
+            flipped: false
+        }, {
+            flipped: false
+        },
+        ]
 
-		this.wwAnimStarted = false;
+        this.wwAnimStarted = false;
 
-		if (!this.section.data.cardsWwObject) {
-			this.section.data.cardsWwObject = []
-		}
+        if (!this.section.data.cardsWwObject) {
+            this.section.data.cardsWwObject = []
+        }
 
-		while (this.section.data.cardsWwObject.length < 6) {
-			this.section.data.cardsWwObject.push([]);
-		}
+        while (this.section.data.cardsWwObject.length < 6) {
+            this.section.data.cardsWwObject.push([]);
+        }
 
-		//Add scroll event
-		window.addEventListener('scroll', this.wwOnScroll);
+        //Add scroll event
+        window.addEventListener('scroll', this.wwOnScroll);
 
-		//Trigger scroll at least once
-		setTimeout(this.wwOnScroll, 200);
-	},
-	mounted: function () {
+        //Trigger scroll at least once
+        setTimeout(this.wwOnScroll, 200);
+    },
+    mounted: function () {
 
-		this.$el.querySelector(".card-1 .card").addEventListener("mousemove", this.wwOnMousemove);
-		this.$el.querySelector(".card-1 .card").addEventListener("mouseout", this.wwOnMouseout);
+        this.$el.querySelector(".card-1 .card").addEventListener("mousemove", this.wwOnMousemove);
+        this.$el.querySelector(".card-1 .card").addEventListener("mouseout", this.wwOnMouseout);
 
-		this.$el.querySelector(".card-2 .card").addEventListener("mousemove", this.wwOnMousemove);
-		this.$el.querySelector(".card-2 .card").addEventListener("mouseout", this.wwOnMouseout);
+        this.$el.querySelector(".card-2 .card").addEventListener("mousemove", this.wwOnMousemove);
+        this.$el.querySelector(".card-2 .card").addEventListener("mouseout", this.wwOnMouseout);
 
-		this.$el.querySelector(".card-3 .card").addEventListener("mousemove", this.wwOnMousemove);
-		this.$el.querySelector(".card-3 .card").addEventListener("mouseout", this.wwOnMouseout);
+        this.$el.querySelector(".card-3 .card").addEventListener("mousemove", this.wwOnMousemove);
+        this.$el.querySelector(".card-3 .card").addEventListener("mouseout", this.wwOnMouseout);
 
-	}
+    }
 };
 </script>
 
