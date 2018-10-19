@@ -51,9 +51,9 @@
                                 <wwObject class="background" v-bind:ww-object="section.data.card1Bg" v-bind:section="section" ww-category="background">
                                 </wwObject>
 
-                                <div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[0]" :key="wwObject.uniqueId">
-                                    <wwObject v-bind:ww-object="wwObject" v-bind:section="section" ww-default-object-type="ww-text"></wwObject>
-                                </div>
+                                <wwLayoutColumn tag="div" ww-default="ww-image" v-bind:ww-list="section.data.cardsWwObject[0]" class="ww-object-container">
+                                    <wwObject v-for="wwObject in section.data.cardsWwObject[0]" :key="wwObject.uniqueId" v-bind:ww-object="wwObject" v-bind:section="section" ww-default-object-type="ww-text"></wwObject>
+                                </wwLayoutColumn>
 
                                 <div class="handle-container">
                                     <div class="handle" v-bind:style="section.data.handleGradient">
@@ -352,6 +352,8 @@ export default {
 
         //Trigger scroll at least once
         setTimeout(this.wwOnScroll, 200);
+
+        let self = this;
     },
     mounted: function () {
 
