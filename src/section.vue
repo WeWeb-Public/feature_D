@@ -3,7 +3,7 @@
     <div class="feature_D">
 
         <!-- wwManager:start -->
-        <wwSectionEditMenu v-bind:section="section"></wwSectionEditMenu>
+        <wwSectionEditMenu v-bind:sectionCtrl="sectionCtrl"></wwSectionEditMenu>
         <!-- wwManager:end -->
 
         <wwObject class="background" v-bind:ww-object="section.data.background" ww-category="background">
@@ -87,9 +87,9 @@
                                 <wwObject class="background" v-bind:ww-object="section.data.card2Bg" ww-category="background">
                                 </wwObject>
 
-                                <div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[1]" :key="wwObject.uniqueId">
-                                    <wwObject v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
-                                </div>
+                                <wwLayoutColumn tag="div" ww-default="ww-image" v-bind:ww-list="section.data.cardsWwObject[1]" class="ww-object-container">
+                                    <wwObject v-for="wwObject in section.data.cardsWwObject[1]" :key="wwObject.uniqueId" v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
+                                </wwLayoutColumn>
 
                                 <div class="handle-container">
                                     <div class="handle" v-bind:style="section.data.handleGradient">
@@ -121,9 +121,9 @@
                                 <wwObject class="background" v-bind:ww-object="section.data.card3Bg" ww-category="background">
                                 </wwObject>
 
-                                <div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[2]" :key="wwObject.uniqueId">
-                                    <wwObject v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
-                                </div>
+                                <wwLayoutColumn tag="div" ww-default="ww-image" v-bind:ww-list="section.data.cardsWwObject[2]" class="ww-object-container">
+                                    <wwObject v-for="wwObject in section.data.cardsWwObject[2]" :key="wwObject.uniqueId" v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
+                                </wwLayoutColumn>
 
                                 <div class="handle-container">
                                     <div class="handle" v-bind:style="section.data.handleGradient">
@@ -163,10 +163,12 @@ export default {
     },
     data() {
         return {
-            section: this.sectionCtrl.get()
         }
     },
     computed: {
+        section() {
+            return this.sectionCtrl.get();
+        }
     },
     methods: {
         wwOnScroll: function () {
