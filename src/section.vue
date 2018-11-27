@@ -42,17 +42,17 @@
                 </div>
             </div>
             <div class="card-container container">
-                <div class="card-column">
-                    <div class="card-outter card-1">
+                <div class="card-column" v-for='(card, index) of section.data.cards' :key="index">
+                    <div class="card-outter" @click="wwOnClickCard(card, $event)" @mousemove="wwOnMousemove(card, $event)" @mouseout="wwOnMouseout(card, $event)" v-bind:class="'card-' + (index+1)">
                         <div class="card-string"></div>
-                        <div class="card" v-on:click="wwOnClickCard" data-card="1" ng-class="{'flipped':cardStatus[0].flipped}">
+                        <div class="card">
                             <div class="card-content front">
 
-                                <wwObject class="background" v-bind:ww-object="section.data.card1Bg" ww-category="background">
+                                <wwObject class="background" v-bind:ww-object="card.front.background" ww-category="background">
                                 </wwObject>
 
-                                <wwLayoutColumn tag="div" ww-default="ww-image" v-bind:ww-list="section.data.cardsWwObject[0]" class="ww-object-container">
-                                    <wwObject v-for="wwObject in section.data.cardsWwObject[0]" :key="wwObject.uniqueId" v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
+                                <wwLayoutColumn tag="div" ww-default="ww-image" v-bind:ww-list="card.front.list" class="ww-object-container" @ww-add="add(card.front.list, $event)" @ww-remove="remove(card.front.list, $event)">
+                                    <wwObject v-for="wwObject in card.front.list" :key="wwObject.uniqueId" v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
                                 </wwLayoutColumn>
 
                                 <div class="handle-container">
@@ -66,84 +66,16 @@
                             </div>
 
                             <div class="card-content back">
-                                <wwObject class="background" v-bind:ww-object="section.data.card4Bg" ww-category="background">
+                                <wwObject class="background" v-bind:ww-object="card.back.background" ww-category="background">
                                 </wwObject>
 
-                                <div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[3]" :key="wwObject.uniqueId">
-                                    <wwObject v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="card-column">
-                    <div class="card-outter card-2">
-                        <div class="card-string"></div>
-                        <div class="card" v-on:click="wwOnClickCard" data-card="2" ng-class="{'flipped':cardStatus[1].flipped}">
-                            <div class="card-content front">
-                                <wwObject class="background" v-bind:ww-object="section.data.card2Bg" ww-category="background">
-                                </wwObject>
-
-                                <wwLayoutColumn tag="div" ww-default="ww-image" v-bind:ww-list="section.data.cardsWwObject[1]" class="ww-object-container">
-                                    <wwObject v-for="wwObject in section.data.cardsWwObject[1]" :key="wwObject.uniqueId" v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
+                                <wwLayoutColumn tag="div" ww-default="ww-image" v-bind:ww-list="card.back.list" class="ww-object-container" @ww-add="add(card.back.list, $event)" @ww-remove="remove(card.back.list, $event)">
+                                    <wwObject v-for="wwObject in card.back.list" :key="wwObject.uniqueId" v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
                                 </wwLayoutColumn>
 
-                                <div class="handle-container">
-                                    <div class="handle" v-bind:style="section.data.handleGradient">
-                                        <div class="handle-pulse handle-pulse-1"></div>
-                                        <div class="handle-pulse handle-pulse-2"></div>
-                                        <div class="handle-pulse handle-pulse-3"></div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="card-content back">
-                                <wwObject class="background" v-bind:ww-object="section.data.card5Bg" ww-category="background">
-                                </wwObject>
-
-                                <div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[4]" :key="wwObject.uniqueId">
-                                    <wwObject v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
-                                </div>
-
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="card-column">
-                    <div class="card-outter card-3">
-                        <div class="card-string"></div>
-                        <div class="card" v-on:click="wwOnClickCard" data-card="3" ng-class="{'flipped':cardStatus[2].flipped}">
-                            <div class="card-content front">
-                                <wwObject class="background" v-bind:ww-object="section.data.card3Bg" ww-category="background">
-                                </wwObject>
-
-                                <wwLayoutColumn tag="div" ww-default="ww-image" v-bind:ww-list="section.data.cardsWwObject[2]" class="ww-object-container">
-                                    <wwObject v-for="wwObject in section.data.cardsWwObject[2]" :key="wwObject.uniqueId" v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
-                                </wwLayoutColumn>
-
-                                <div class="handle-container">
-                                    <div class="handle" v-bind:style="section.data.handleGradient">
-                                        <div class="handle-pulse handle-pulse-1"></div>
-                                        <div class="handle-pulse handle-pulse-2"></div>
-                                        <div class="handle-pulse handle-pulse-3"></div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="card-content back">
-                                <wwObject class="background" v-bind:ww-object="section.data.card6Bg" ww-category="background">
-                                </wwObject>
-
-                                <div class="ww-object-container" v-for="wwObject in section.data.cardsWwObject[5]" :key="wwObject.uniqueId">
-                                    <wwObject v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
-                                </div>
-
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -163,6 +95,7 @@ export default {
     },
     data() {
         return {
+            cardCount: 3
         }
     },
     computed: {
@@ -171,6 +104,99 @@ export default {
         }
     },
     methods: {
+        initData() {
+            let needUpdate = false;
+
+            needUpdate = this.migrateOldData();
+
+            //Init objects
+
+            if (!this.section.data.background) {
+                this.section.data.background = wwLib.wwObject.getDefault({ type: 'ww-color', data: { color: 'white' } });
+                needUpdate = true;
+            }
+
+            if (!this.section.data.title) {
+                this.section.data.title = wwLib.wwObject.getDefault({ type: 'ww-text' });
+                needUpdate = true;
+            }
+
+            if (_.isEmpty(this.section.data.cards)) {
+                this.section.data.cards = [];
+                needUpdate = true;
+            }
+
+            if (this.section.data.cards.length < this.cardCount) {
+                for (let i = this.section.data.cards.length; i < this.cardCount; i++) {
+                    this.section.data.cards.push({
+                        flipped: false,
+                        front: {
+                            background: null,
+                            list: []
+                        },
+                        back: {
+                            background: null,
+                            list: []
+                        }
+                    })
+                }
+                needUpdate = true;
+            }
+
+            for (const card of this.section.data.cards) {
+                if (!card.front.background) {
+                    card.front.background = wwLib.wwObject.getDefault({ type: 'ww-color', data: { color: 'white' } });
+                    needUpdate = true;
+                }
+                if (!card.back.background) {
+                    card.back.background = wwLib.wwObject.getDefault({ type: 'ww-color', data: { color: 'white' } });
+                    needUpdate = true;
+                }
+            }
+
+            if (needUpdate) {
+                this.sectionCtrl.update(this.section);
+            }
+        },
+        migrateOldData() {
+            if (this.section.data.cardsWwObject && this.section.data.cardsWwObject.length) {
+
+                this.section.data.cards = [];
+
+                for (let i = 0; i < 3; i++) {
+                    this.section.data.cards.push({
+                        flipped: false,
+                        front: {
+                            background: this.section.data['card' + (i + 1) + 'Bg'],
+                            list: this.section.data.cardsWwObject[i]
+                        },
+                        back: {
+                            background: this.section.data['card' + (i + 4) + 'Bg'],
+                            list: this.section.data.cardsWwObject[i + 3]
+                        }
+                    })
+
+                    delete this.section.data['card' + (i + 1) + 'Bg'];
+                    delete this.section.data['card' + (i + 4) + 'Bg'];
+                    delete this.section.data.cardsWwObject[i];
+                    delete this.section.data.cardsWwObject[i + 3];
+                }
+
+                return true;
+            }
+
+            return false;
+        },
+        add(list, options) {
+            list.splice(options.index, 0, options.wwObject);
+
+            this.sectionCtrl.update(this.section);
+        },
+        remove(list, options) {
+            list.splice(options.index, 1);
+
+            this.sectionCtrl.update(this.section);
+        },
         wwOnScroll: function () {
             if (this.wwAnimStarted) {
                 return;
@@ -201,22 +227,17 @@ export default {
             }, 300);
 
         },
-        wwOnMousemove: function (event, factor) {
-            factor = factor || 1;
+        wwOnMousemove: function (card, event) {
+            if (card.flipping || !event) {
+                return;
+            }
+
+            let factor = 1;
             var offset = 0;
 
             var c = (event.target || event.srcElement).closest('.card');
 
-            var index = 0;
-
-            if (c.getAttribute("data-card") == "2") {
-                index = 1;
-            }
-            if (c.getAttribute("data-card") == "3") {
-                index = 2;
-            }
-
-            if (this.cardStatus[index].flipped) {
+            if (card.flipped) {
                 offset = 180;
             }
 
@@ -239,21 +260,17 @@ export default {
             c.style.transform = "perspective(600px) rotateX(" + rX + "deg) rotateY(" + rY + "deg)";
 
         },
-        wwOnMouseout: function (event) {
+        wwOnMouseout: function (card, event) {
+            if (card.flipping || !event) {
+                return;
+            }
+
             var offset = 0;
 
             var c = (event.target || event.srcElement).closest('.card');
 
-            var index = 0;
 
-            if (c.getAttribute("data-card") == "2") {
-                index = 1;
-            }
-            if (c.getAttribute("data-card") == "3") {
-                index = 2;
-            }
-
-            if (this.cardStatus[index].flipped) {
+            if (card.flipped) {
                 offset = 180;
             }
 
@@ -267,18 +284,13 @@ export default {
             //c.css("-o-transform", "perspective(600px) rotateX(0deg) rotateY( " + offset + "deg)");
             c.style.transform = "perspective(600px) rotateX(0deg) rotateY( " + offset + "deg)";
         },
-        wwOnClickCard: function (event) {
+        wwOnClickCard: function (card, event) {
+
+            if (!event) {
+                return;
+            }
 
             var c = (event.target || event.srcElement).closest('.card');
-
-            var index = 0;
-
-            if (c.getAttribute("data-card") == "2") {
-                index = 1;
-            }
-            if (c.getAttribute("data-card") == "3") {
-                index = 2;
-            }
 
             var parentOffset = c.parentElement.getBoundingClientRect();
 
@@ -293,7 +305,7 @@ export default {
             c.style.transition = "1s all ease";
 
             var offset = 0;
-            if (!this.cardStatus[index].flipped) {
+            if (!card.flipped) {
                 offset = 180;
             }
 
@@ -310,7 +322,12 @@ export default {
                 c.style.transform = "perspective(600px) rotateY(" + offset + "deg)";
             }
 
-            this.cardStatus[index].flipped = !this.cardStatus[index].flipped;
+            card.flipped = !card.flipped;
+            card.flipping = true;
+            setTimeout(function () {
+                card.flipping = false;
+            }, 1000);
+
 
             const self = this;
 
@@ -323,36 +340,12 @@ export default {
     },
     beforeDestroy: function () {
         window.removeEventListener('scroll', this.wwOnScroll);
-
-        this.$el.querySelector(".card-1 .card").removeEventListener("mousemove", this.wwOnMousemove);
-        this.$el.querySelector(".card-1 .card").removeEventListener("mouseout", this.wwOnMouseout);
-
-        this.$el.querySelector(".card-2 .card").removeEventListener("mousemove", this.wwOnMousemove);
-        this.$el.querySelector(".card-2 .card").removeEventListener("mouseout", this.wwOnMouseout);
-
-        this.$el.querySelector(".card-3 .card").removeEventListener("mousemove", this.wwOnMousemove);
-        this.$el.querySelector(".card-3 .card").removeEventListener("mouseout", this.wwOnMouseout);
     },
     created: function () {
 
-        this.cardStatus = [{
-            flipped: false
-        }, {
-            flipped: false
-        }, {
-            flipped: false
-        },
-        ]
+        this.initData();
 
         this.wwAnimStarted = false;
-
-        if (!this.section.data.cardsWwObject) {
-            this.section.data.cardsWwObject = []
-        }
-
-        while (this.section.data.cardsWwObject.length < 6) {
-            this.section.data.cardsWwObject.push([]);
-        }
 
         //Add scroll event
         window.addEventListener('scroll', this.wwOnScroll);
@@ -363,15 +356,6 @@ export default {
         let self = this;
     },
     mounted: function () {
-
-        this.$el.querySelector(".card-1 .card").addEventListener("mousemove", this.wwOnMousemove);
-        this.$el.querySelector(".card-1 .card").addEventListener("mouseout", this.wwOnMouseout);
-
-        this.$el.querySelector(".card-2 .card").addEventListener("mousemove", this.wwOnMousemove);
-        this.$el.querySelector(".card-2 .card").addEventListener("mouseout", this.wwOnMouseout);
-
-        this.$el.querySelector(".card-3 .card").addEventListener("mousemove", this.wwOnMousemove);
-        this.$el.querySelector(".card-3 .card").addEventListener("mouseout", this.wwOnMouseout);
 
     }
 };
