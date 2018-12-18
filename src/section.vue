@@ -48,6 +48,9 @@
                                 <wwLayoutColumn tag="div" ww-default="ww-image" v-bind:ww-list="card.front.list" class="ww-object-container" @ww-add="add(card.front.list, $event)" @ww-remove="remove(card.front.list, $event)">
                                     <wwObject v-for="wwObject in card.front.list" :key="wwObject.uniqueId" v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
                                 </wwLayoutColumn>
+                                <wwLayoutColumn tag="div" ww-default="ww-image" v-bind:ww-list="card.front.list" class="ww-object-container" @ww-add="add(card.front.list, $event)" @ww-remove="remove(card.front.list, $event)">
+                                    <wwObject v-for="wwObject in card.front.list" :key="wwObject.uniqueId" v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
+                                </wwLayoutColumn>
 
                                 <div class="handle-container">
                                     <div class="handle" v-bind:style="section.data.handleGradient">
@@ -132,6 +135,10 @@ export default {
             }
 
             for (const card of this.section.data.cards) {
+                if (card.flipped) {
+                    card.flipped = false;
+                    needUpdate = true;
+                }
                 if (!card.front.background) {
                     card.front.background = wwLib.wwObject.getDefault({ type: 'ww-color', data: { color: 'white' } });
                     needUpdate = true;
@@ -322,7 +329,8 @@ export default {
             setTimeout(function () {
                 c.addEventListener("mousemove", self.wwOnMousemove);
                 c.addEventListener("mouseout", self.wwOnMouseout);
-            }, 1050)
+            }, 1050);
+
 
         }
     },
