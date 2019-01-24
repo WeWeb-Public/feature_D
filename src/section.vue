@@ -39,7 +39,7 @@
             </div>
             <div class="card-container container">
                 <div class="card-column" v-for="(card, index) of section.data.cards" :key="index">
-                    <div class="card-outter" @click="wwOnClickCard(card, $event)" @mousemove="wwOnMousemove(card, $event)" @mouseout="wwOnMouseout(card, $event)" v-bind:class="'card-' + (index+1)">
+                    <div class="card-outter" @click="wwOnClickCard(index, $event)" @mousemove="wwOnMousemove(index, $event)" @mouseout="wwOnMouseout(index, $event)" v-bind:class="'card-' + (index+1)">
                         <div class="card-string"></div>
                         <div class="card">
                             <div class="card-content front">
@@ -48,12 +48,9 @@
                                 <wwLayoutColumn tag="div" ww-default="ww-image" v-bind:ww-list="card.front.list" class="ww-object-container" @ww-add="add(card.front.list, $event)" @ww-remove="remove(card.front.list, $event)">
                                     <wwObject v-for="wwObject in card.front.list" :key="wwObject.uniqueId" v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
                                 </wwLayoutColumn>
-                                <wwLayoutColumn tag="div" ww-default="ww-image" v-bind:ww-list="card.front.list" class="ww-object-container" @ww-add="add(card.front.list, $event)" @ww-remove="remove(card.front.list, $event)">
-                                    <wwObject v-for="wwObject in card.front.list" :key="wwObject.uniqueId" v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
-                                </wwLayoutColumn>
 
                                 <div class="handle-container">
-                                    <div class="handle" v-bind:style="section.data.handleGradient">
+                                    <div class="handle" :style="section.data.handleGradient">
                                         <div class="handle-pulse handle-pulse-1"></div>
                                         <div class="handle-pulse handle-pulse-2"></div>
                                         <div class="handle-pulse handle-pulse-3"></div>
@@ -86,7 +83,10 @@ export default {
     },
     data() {
         return {
-            cardCount: 3
+            cardCount: 3,
+            cardsStatus: [
+                {}, {}, {}
+            ]
         }
     },
     computed: {
@@ -95,6 +95,9 @@ export default {
         }
     },
     methods: {
+        test() {
+            console.log('test ! ');
+        },
         initData() {
             let needUpdate = false;
 
@@ -222,8 +225,8 @@ export default {
             }, 300);
 
         },
-        wwOnMousemove: function (card, event) {
-            if (card.flipping || !event) {
+        wwOnMousemove: function (index, event) {
+            if (this.cardsStatus[index].flipping || !event) {
                 return;
             }
 
@@ -232,7 +235,7 @@ export default {
 
             var c = (event.target || event.srcElement).closest('.card');
 
-            if (card.flipped) {
+            if (this.cardsStatus[index].flipped) {
                 offset = 180;
             }
 
@@ -255,8 +258,9 @@ export default {
             c.style.transform = "perspective(600px) rotateX(" + rX + "deg) rotateY(" + rY + "deg)";
 
         },
-        wwOnMouseout: function (card, event) {
-            if (card.flipping || !event) {
+        wwOnMouseout: function (index, event) {
+
+            if (this.cardsStatus[index].flipping || !event) {
                 return;
             }
 
@@ -265,7 +269,7 @@ export default {
             var c = (event.target || event.srcElement).closest('.card');
 
 
-            if (card.flipped) {
+            if (this.cardsStatus[index].flipped) {
                 offset = 180;
             }
 
@@ -279,7 +283,7 @@ export default {
             //c.css("-o-transform", "perspective(600px) rotateX(0deg) rotateY( " + offset + "deg)");
             c.style.transform = "perspective(600px) rotateX(0deg) rotateY( " + offset + "deg)";
         },
-        wwOnClickCard: function (card, event) {
+        wwOnClickCard: function (index, event) {
 
             if (!event) {
                 return;
@@ -291,16 +295,13 @@ export default {
 
             var x = (event.pageX - parentOffset.left) / c.getBoundingClientRect().width * 2 - 1;
 
-            c.removeEventListener("mousemove", this.wwOnMousemove);
-            c.removeEventListener("mouseout", this.wwOnMouseout);
-
             //c.css("-webkit-transition", "1s all ease");
             //c.css("-moz-transition", "1s all ease");
             //c.css("-o-transition", "1s all ease");
             c.style.transition = "1s all ease";
 
             var offset = 0;
-            if (!card.flipped) {
+            if (!this.cardsStatus[index].flipped) {
                 offset = 180;
             }
 
@@ -317,19 +318,13 @@ export default {
                 c.style.transform = "perspective(600px) rotateY(" + offset + "deg)";
             }
 
-            card.flipped = !card.flipped;
-            card.flipping = true;
-            setTimeout(function () {
-                card.flipping = false;
-            }, 1000);
+            this.cardsStatus[index].flipped = !this.cardsStatus[index].flipped;
 
 
             const self = this;
-
             setTimeout(function () {
-                c.addEventListener("mousemove", self.wwOnMousemove);
-                c.addEventListener("mouseout", self.wwOnMouseout);
-            }, 1050);
+                self.cardsStatus[index].flipping = false;
+            }, 1000);
 
 
         }
@@ -490,6 +485,8 @@ export default {
     right: 0;
     bottom: 0;
     overflow: hidden;
+    z-index: 1;
+    pointer-events: all;
 }
 
 .feature_D .handle {
