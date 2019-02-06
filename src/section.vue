@@ -95,9 +95,6 @@ export default {
         }
     },
     methods: {
-        test() {
-            console.log('test ! ');
-        },
         initData() {
             let needUpdate = false;
 
@@ -247,14 +244,14 @@ export default {
             var rX = -y * 2 * factor;
             var rY = x * 2 * factor + offset;
 
-            //c.css("-webkit-transition", "");
-            //c.css("-moz-transition", "");
-            //c.css("-o-transition", "");
+            c.style["-webkit-transition"] = "";
+            c.style["-moz-transition"] = "";
+            c.style["-o-transition"] = "";
             c.style.transition = "";
 
-            //c.css("-webkit-transform", "perspective(600px) rotateX(" + rX + "deg) rotateY(" + rY + "deg)");
-            //c.css("-moz-transform", "perspective(600px) rotateX(" + rX + "deg) rotateY(" + rY + "deg)");
-            //c.css("-o-transform", "perspective(600px) rotateX(" + rX + "deg) rotateY(" + rY + "deg)");
+            c.style["-webkit-transform"] = "perspective(600px) rotateX(" + rX + "deg) rotateY(" + rY + "deg)";
+            c.style["-moz-transform"] = "perspective(600px) rotateX(" + rX + "deg) rotateY(" + rY + "deg)";
+            c.style["-o-transform"] = "perspective(600px) rotateX(" + rX + "deg) rotateY(" + rY + "deg)";
             c.style.transform = "perspective(600px) rotateX(" + rX + "deg) rotateY(" + rY + "deg)";
 
         },
@@ -273,19 +270,19 @@ export default {
                 offset = 180;
             }
 
-            //c.css("-webkit-transition", "all 0.3s ease");
-            //c.css("-moz-transition", "all 0.3s ease");
-            //c.css("-o-transition", "all 0.3s ease");
+            c.style["-webkit-transition"] = "all 0.3s ease";
+            c.style["-moz-transition"] = "all 0.3s ease";
+            c.style["-o-transition"] = "all 0.3s ease";
             c.style.transition = "all 0.3s ease";
 
-            //c.css("-webkit-transform", "perspective(600px) rotateX(0deg) rotateY( " + offset + "deg)");
-            //c.css("-moz-transform", "perspective(600px) rotateX(0deg) rotateY( " + offset + "deg)");
-            //c.css("-o-transform", "perspective(600px) rotateX(0deg) rotateY( " + offset + "deg)");
+            c.style["-webkit-transform"] = "perspective(600px) rotateX(0deg) rotateY( " + offset + "deg)";
+            c.style["-moz-transform"] = "perspective(600px) rotateX(0deg) rotateY( " + offset + "deg)";
+            c.style["-o-transform"] = "perspective(600px) rotateX(0deg) rotateY( " + offset + "deg)";
             c.style.transform = "perspective(600px) rotateX(0deg) rotateY( " + offset + "deg)";
         },
         wwOnClickCard: function (index, event) {
 
-            if (!event) {
+            if (this.cardsStatus[index].flipping || !event) {
                 return;
             }
 
@@ -295,9 +292,9 @@ export default {
 
             var x = (event.pageX - parentOffset.left) / c.getBoundingClientRect().width * 2 - 1;
 
-            //c.css("-webkit-transition", "1s all ease");
-            //c.css("-moz-transition", "1s all ease");
-            //c.css("-o-transition", "1s all ease");
+            c.style["-webkit-transition"] = "1s all ease";
+            c.style["-moz-transition"] = "1s all ease";
+            c.style["-o-transition"] = "1s all ease";
             c.style.transition = "1s all ease";
 
             var offset = 0;
@@ -306,17 +303,19 @@ export default {
             }
 
             if (x > 0) {
-                //c.css("-webkit-transform", "perspective(600px) rotateY(" + (-offset) + "deg)");
-                //c.css("-moz-transform", "perspective(600px) rotateY(" + (-offset) + "deg)");
-                //c.css("-o-transform", "perspective(600px) rotateY(" + (-offset) + "deg)");
+                c.style["-webkit-transform"] = "perspective(600px) rotateY(" + (-offset) + "deg)";
+                c.style["-moz-transform"] = "perspective(600px) rotateY(" + (-offset) + "deg)";
+                c.style["-o-transform"] = "perspective(600px) rotateY(" + (-offset) + "deg)";
                 c.style.transform = "perspective(600px) rotateY(" + (-offset) + "deg)";
             }
             else {
-                //c.css("-webkit-transform", "perspective(600px) rotateY(" + offset + "deg)");
-                //c.css("-moz-transform", "perspective(600px) rotateY(" + offset + "deg)");
-                //c.css("-o-transform", "perspective(600px) rotateY(" + offset + "deg)");
+                c.style["-webkit-transform"] = "perspective(600px) rotateY(" + offset + "deg)";
+                c.style["-moz-transform"] = "perspective(600px) rotateY(" + offset + "deg)";
+                c.style["-o-transform"] = "perspective(600px) rotateY(" + offset + "deg)";
                 c.style.transform = "perspective(600px) rotateY(" + offset + "deg)";
             }
+
+            this.cardsStatus[index].flipping = true;
 
             this.cardsStatus[index].flipped = !this.cardsStatus[index].flipped;
 
