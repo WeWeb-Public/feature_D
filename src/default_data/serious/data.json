@@ -1,0 +1,729 @@
+{
+    "isNew": false,
+    "title": {
+        "data": {
+            "children": {}
+        },
+        "link": {
+            "data": {},
+            "type": "none"
+        },
+        "tags": [],
+        "ratio": -1,
+        "hidden": false,
+        "content": {
+            "data": {
+                "tag": "div",
+                "font": "",
+                "size": 1.5,
+                "text": {
+                    "en_GB": "<b>WHAT WE DO</b>",
+                    "fr_FR": "<span data-v-8c355c2c=\"\" style=\"font-size:2rem\"><div data-v-8c355c2c=\"\" style=\"text-align: center;\"><b data-v-8c355c2c=\"\" style=\"text-align: initial;\">👿 Serious business&nbsp;👺</b></div></span>"
+                },
+                "align": "center",
+                "color": "",
+                "classes": [],
+                "children": []
+            },
+            "type": "ww-text"
+        },
+        "children": {},
+        "paddings": {},
+        "uniqueId": 1531989468548.084,
+        "wwVersion": 3,
+        "anim": {},
+        "new": false
+    },
+    "background": {
+        "data": {},
+        "link": {
+            "data": {},
+            "type": "none"
+        },
+        "tags": [],
+        "ratio": -1,
+        "hidden": false,
+        "content": {
+            "data": {
+                "backgroundColor": "#FFFFFF"
+            },
+            "type": "ww-color"
+        },
+        "children": {},
+        "paddings": {},
+        "uniqueId": 1531989468548.1125,
+        "wwVersion": 3,
+        "anim": {},
+        "new": false
+    },
+    "handleGradient": {
+        "background": "linear-gradient(90deg, #c23c4e 0%, #c23c4e 100%)"
+    },
+    "cards": [
+        {
+            "flipped": false,
+            "front": {
+                "background": {
+                    "data": {},
+                    "link": {
+                        "data": {},
+                        "type": "none"
+                    },
+                    "tags": [],
+                    "ratio": -1,
+                    "hidden": false,
+                    "content": {
+                        "data": {
+                            "backgroundColor": "#ffffff"
+                        },
+                        "type": "ww-color"
+                    },
+                    "children": {},
+                    "paddings": {},
+                    "uniqueId": 1531989468548.7947,
+                    "wwVersion": 3,
+                    "anim": {},
+                    "new": false
+                },
+                "list": [
+                    {
+                        "data": {
+                            "children": {}
+                        },
+                        "link": {
+                            "data": {},
+                            "type": "none"
+                        },
+                        "tags": [],
+                        "ratio": -1,
+                        "hidden": false,
+                        "content": {
+                            "data": {
+                                "tag": "div",
+                                "font": "",
+                                "size": 1,
+                                "text": {
+                                    "en_GB": "<b>UNIQUE TECHNOLOGY</b><div><br></div>",
+                                    "fr_FR": "<div data-v-8c355c2c=\"\" style=\"text-align: center;\"><b data-v-8c355c2c=\"\">No fun here.</b></div>"
+                                },
+                                "align": "center",
+                                "color": "",
+                                "classes": [],
+                                "children": []
+                            },
+                            "type": "ww-text"
+                        },
+                        "children": {},
+                        "paddings": {
+                            "xs": {
+                                "top": 0,
+                                "left": 0,
+                                "right": 0,
+                                "bottom": 15
+                            }
+                        },
+                        "uniqueId": 1531989468548.9136,
+                        "wwVersion": 3,
+                        "anim": {},
+                        "new": false
+                    },
+                    {
+                        "data": {
+                            "children": {}
+                        },
+                        "link": {
+                            "data": {},
+                            "type": "none"
+                        },
+                        "tags": [],
+                        "ratio": 25,
+                        "hidden": false,
+                        "content": {
+                            "data": {
+                                "alt": {
+                                    "en_GB": "webeo",
+                                    "fr_FR": ""
+                                },
+                                "url": "https://wewebapp.s3.eu-west-3.amazonaws.com/designs/19/sections/R58u5qPaMWWhuLUj0FXOE7zf03krR2WV.jpg",
+                                "zoom": 0.44715482043924,
+                                "hover": {
+                                    "name": "",
+                                    "options": {}
+                                },
+                                "ratio": -1,
+                                "classes": [],
+                                "imgSize": {
+                                    "h": 700,
+                                    "w": 700
+                                },
+                                "position": {
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "borderColor": "",
+                                "filterGradient": null,
+                                "style": {},
+                                "dataUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAUCAYAAABF5ffbAAAAKUlEQVQoU2NkwAIYh5Kgn4Pjf1FRQQZZGTGGhv4ZjGDHYxVE99VQ8SYAlLAIFQajKXQAAAAASUVORK5CYII="
+                            },
+                            "type": "ww-image"
+                        },
+                        "children": {},
+                        "paddings": {},
+                        "uniqueId": 1531989468548.214,
+                        "wwVersion": 3,
+                        "anim": {},
+                        "new": false
+                    },
+                    {
+                        "data": {
+                            "children": {}
+                        },
+                        "link": {
+                            "data": {},
+                            "type": "none"
+                        },
+                        "tags": [],
+                        "ratio": -1,
+                        "hidden": false,
+                        "content": {
+                            "data": {
+                                "tag": "div",
+                                "font": "Raleway Light",
+                                "size": 1,
+                                "text": {
+                                    "en_GB": "<div><br></div><div>We buid your bespoke web solution - You benefit from our application, simple & intuitive, to manage your content freely.</div><div></div><div><br></div><div><br></div><div><br></div>",
+                                    "fr_FR": "<div data-v-8c355c2c=\"\" style=\"text-align: center;\">Stop having fun now.</div>"
+                                },
+                                "align": "center",
+                                "color": "",
+                                "classes": [],
+                                "children": []
+                            },
+                            "type": "ww-text"
+                        },
+                        "children": {},
+                        "paddings": {
+                            "lg": {
+                                "bottom": 50,
+                                "top": 29
+                            },
+                            "md": {},
+                            "sm": {
+                                "top": 0,
+                                "left": 30,
+                                "right": 30,
+                                "bottom": 0
+                            },
+                            "xs": {
+                                "top": 0,
+                                "left": 20,
+                                "right": 20,
+                                "bottom": 0
+                            }
+                        },
+                        "uniqueId": 1531989468548.6128,
+                        "wwVersion": 3,
+                        "anim": {},
+                        "new": false
+                    }
+                ]
+            },
+            "back": {
+                "background": {
+                    "data": {},
+                    "link": {
+                        "data": {},
+                        "type": "none"
+                    },
+                    "tags": [],
+                    "ratio": 100,
+                    "hidden": false,
+                    "content": {
+                        "data": {
+                            "alt": {
+                                "en_GB": "webeo",
+                                "fr_FR": "webeo"
+                            },
+                            "url": "https://wewebprod.s3.eu-west-1.amazonaws.com/designs/19/sections/EepeYWoe0nypsaLOGoLPjfwmtQg9RcEi.gif",
+                            "zoom": -1,
+                            "hover": {
+                                "name": "",
+                                "options": {}
+                            },
+                            "ratio": -1,
+                            "classes": [],
+                            "imgSize": {
+                                "h": 375,
+                                "w": 500
+                            },
+                            "position": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "borderColor": "",
+                            "filterGradient": null,
+                            "style": {},
+                            "dataUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAADe0lEQVQ4T82US2hcVRjHf+ee+5rJPG6eM8nMJJOkSe0jJb7QheCrUmkrUrAbBQ0iEVtKoqCuit2J6E4Eu+3SIkooIogaxQcWQ9EqCjalySRpktZkkklm7r1z7z0yY9FNlxH84KwO/M7j9/8+wQ6X2GEeOw98/p33VfDrF6RVmVxvnkgpfNdF002CSGMztKi1ZBmyfqPglNGkwK25tDs3MM1NNLWE51rUahqOA+Lkc4eVqYVEQE8hx4XPZrhSLSPCEFvoJCJJtiNJd8ahvy9LzNYQ+AyMPEIyZRPbmMSrBQhN0t7uIibHDikpJWEUkS3kOPfBNLVDeRK7OokbcS6e/hC1VodQcfjgCPfeuQe/XieTlQzfMYQTvI0uPSIkVuOwybHHlZQaURSRKeQ5P/Utv5sVkvu60OImUpfcuPAH7uw6o/sKHHviAba3ymTiP5DrLmBbFhARREvsGlz5F9i4YU+xyCefzzD99U+gAfKWs0A1w5DLpHhx7Ai+V6NFL7O7GCEQKAGhEMTNEmLi1pOVUvQU+7h4aZbzH3112zQlW0xOjj+Jleiky7pGV3qL2prEK6eoaotk+k3ExPhx5aQMNm7+SX6wn7mFm7x7duq2QMOQvHLiKGtll/aONJ1mlWK9wLp9BSvtUQp7ERMvPau62g1WSyVyA0VCJXjv7FRTUuNvTUPHsk0s0yCdivHYgwcwTBNN0xB+jWG/EykMSvUq83cfQbx1ZlyhIpbm5sn2FtB1SRiqpqTGQinCSCEEBL6P53lUKpskkklsTRJsu/SaGeaH7kcbGEG8fuopFdY9Qq8OmkDoOrGWOEE9+BsoBFEYNrYQaotUvEI+53Lpsolu9RAEAeXNbbqPnUbaCcRrp44rJ51gZWEJqWlIy2KrWiVmW+iGSSwew2t0jvA5+tCXzM23sH/PGioSnPv4USqVGtV4nsLBF9AsG/HyiWdUR5vF6sJiE9gsKan6Pq1O+h85iViFvcWfGR5cReoRrmcw/f0A18sH2O5J0ffjIpW9DyPefGNcCRWxvniNUGnNxC+vz5JMtaLEdXzfRAhBzPboSvuYsTU6nYhf5vpIOaOM5r7h8spdJL4r0e+mEGdefVpZUZU23W10F0vlgOUtA1fFsG2TelDHbFhVAbphI/yrZHNtzC1r3Ld7hnv2L+JuxFn9tA91tfU/GF//+wH7FyloZhoHWBJeAAAAAElFTkSuQmCC"
+                        },
+                        "type": "ww-image"
+                    },
+                    "children": {},
+                    "paddings": {},
+                    "uniqueId": 1531989468548.197,
+                    "wwVersion": 3,
+                    "anim": {},
+                    "new": false
+                },
+                "list": []
+            }
+        },
+        {
+            "flipped": false,
+            "front": {
+                "background": {
+                    "data": {},
+                    "link": {
+                        "data": {},
+                        "type": "none"
+                    },
+                    "tags": [],
+                    "ratio": -1,
+                    "hidden": false,
+                    "content": {
+                        "data": {
+                            "backgroundColor": "#ffffff"
+                        },
+                        "type": "ww-color"
+                    },
+                    "children": {},
+                    "paddings": {},
+                    "uniqueId": 1531989468548.7349,
+                    "wwVersion": 3,
+                    "anim": {},
+                    "new": false
+                },
+                "list": [
+                    {
+                        "data": {
+                            "children": {}
+                        },
+                        "link": {
+                            "data": {},
+                            "type": "none"
+                        },
+                        "tags": [],
+                        "ratio": -1,
+                        "hidden": false,
+                        "content": {
+                            "data": {
+                                "tag": "div",
+                                "font": "",
+                                "size": 1,
+                                "text": {
+                                    "en_GB": "<b>EXPERT SERVICES</b><div><br></div>",
+                                    "fr_FR": "<div data-v-8c355c2c=\"\" style=\"text-align: center;\"><b data-v-8c355c2c=\"\" style=\"text-align: initial;\">We are very serious</b></div>"
+                                },
+                                "align": "center",
+                                "color": "",
+                                "classes": [],
+                                "children": []
+                            },
+                            "type": "ww-text"
+                        },
+                        "children": {},
+                        "paddings": {
+                            "xs": {
+                                "top": 0,
+                                "left": 0,
+                                "right": 0,
+                                "bottom": 15
+                            }
+                        },
+                        "uniqueId": 1531989468548.5837,
+                        "wwVersion": 3,
+                        "anim": {},
+                        "new": false
+                    },
+                    {
+                        "data": {
+                            "children": {}
+                        },
+                        "link": {
+                            "data": {},
+                            "type": "none"
+                        },
+                        "tags": [],
+                        "ratio": 25,
+                        "hidden": false,
+                        "content": {
+                            "data": {
+                                "alt": {
+                                    "en_GB": "webeo",
+                                    "fr_FR": "webeo"
+                                },
+                                "url": "https://wewebapp.s3.eu-west-3.amazonaws.com/designs/19/sections/z32AT5soQlfTwHYeL2EB6CTsPOm9KYdk.jpg",
+                                "zoom": -1,
+                                "hover": {
+                                    "name": "",
+                                    "options": {}
+                                },
+                                "ratio": -1,
+                                "classes": [],
+                                "imgSize": {
+                                    "h": 700,
+                                    "w": 700
+                                },
+                                "position": {
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "borderColor": "",
+                                "filterGradient": null,
+                                "style": {},
+                                "dataUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAUCAYAAABF5ffbAAAAPklEQVQoU2NkwAIYh4qgmZnJf3ExcYZ///8x/P79m+Hz588MjKamxv/5+fgZ/jP8Z2BkZGL4AhIcKj7C5k4AVQwRYenQlV4AAAAASUVORK5CYII="
+                            },
+                            "type": "ww-image"
+                        },
+                        "children": {},
+                        "paddings": {},
+                        "uniqueId": 1531989468548.777,
+                        "wwVersion": 3,
+                        "anim": {},
+                        "new": false
+                    },
+                    {
+                        "data": {
+                            "children": {}
+                        },
+                        "link": {
+                            "data": {},
+                            "type": "none"
+                        },
+                        "tags": [],
+                        "ratio": -1,
+                        "hidden": false,
+                        "content": {
+                            "data": {
+                                "tag": "div",
+                                "font": "Raleway Light",
+                                "size": 1,
+                                "text": {
+                                    "en_GB": "<div><br></div><div>Webeo designs & develops web solutions tailored for any need: websites, mobile apps, web-apps. Benefit from experts services.</div><div></div><div><br></div><div><br></div><div><br></div>",
+                                    "fr_FR": "<div data-v-8c355c2c=\"\" style=\"text-align: center;\">.</div>"
+                                },
+                                "align": "center",
+                                "color": "",
+                                "classes": [],
+                                "children": []
+                            },
+                            "type": "ww-text"
+                        },
+                        "children": {},
+                        "paddings": {
+                            "lg": {
+                                "top": 29,
+                                "left": 30,
+                                "right": 30,
+                                "bottom": 50
+                            },
+                            "md": {
+                                "top": 0,
+                                "left": 30,
+                                "right": 30,
+                                "bottom": 0
+                            },
+                            "sm": {
+                                "top": 0,
+                                "left": 5,
+                                "right": 5,
+                                "bottom": 0
+                            },
+                            "xs": {
+                                "top": 0,
+                                "left": 20,
+                                "right": 20,
+                                "bottom": 0
+                            }
+                        },
+                        "uniqueId": 1531989468548.0552,
+                        "wwVersion": 3,
+                        "anim": {},
+                        "new": false
+                    }
+                ]
+            },
+            "back": {
+                "background": {
+                    "data": {},
+                    "link": {
+                        "data": {},
+                        "type": "none"
+                    },
+                    "tags": [],
+                    "ratio": 100,
+                    "hidden": false,
+                    "content": {
+                        "data": {
+                            "alt": {
+                                "en_GB": "webeo",
+                                "fr_FR": ""
+                            },
+                            "url": "https://wewebprod.s3.eu-west-1.amazonaws.com/designs/19/sections/s2fRDtMUkRzNTbPACQEDzTGxSb9jyo2x.gif",
+                            "zoom": -1,
+                            "hover": {
+                                "name": "",
+                                "options": {}
+                            },
+                            "ratio": -1,
+                            "classes": [],
+                            "imgSize": {
+                                "h": 354,
+                                "w": 480
+                            },
+                            "position": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "borderColor": "",
+                            "filterGradient": null,
+                            "style": {},
+                            "dataUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAADcElEQVQ4T82UzWtcVRjGf+fj3rkzk0kmXzPmy2oiKNWIFhUxFosppYVSEUpdFj8QBHduXLh3oaDYRcEoaqBRlLopKAruiiIlhmgQbUmZmKRJmrTJZD7uzD33niN3/Bey8KwO5+U878OP93kFB3zEAetx8IJvv/u+q93TR6NcxFkLwoFzWOuI2g6XgPZBCoEjfTP4GZ8ksZhWG6ckSslOPZP1EW9emHFRNmC/p4eoHaMUeBkwbYfSAhzEkcULZIeOTRKSJMG6tFmC0h6uYyDBCwLES9/84GIriI1FkpAqSAkucugsuLSW3jMpHYkQksi0iJoNtJ/puFZKE+S6iKIW4szc1dQ1NmzSGy6S1THGKISnsGhqSRcuU8QFeZCq47AV1gi6uklMjO1gEuTyBWJTRZz84lfnedCdrHKcSwzoXQ4NeLgI/EBSrca0pWB24yQ7uSfoV+vshFkascLPFvD8PK3mXZT2UTpCnJhddEnUZMp9Rjba4JGBkHuLipwv0V7KTBAay0+3xrkanWLU/c6kWORy/CpxMAhSp2RxCJTyEM99uuh08w5nS3MUAkeBKg8EtQ43hMXPaNY3DbdciSv100yIJaYHl3jv5mskIiDuGsApH7RCSomYujjvhm9U6M5VePbIEuHuDoe9GqWSj/YkrchSb1rW6j3MbJ/n/uo6E1zjWuUZArPK6pPHsfkCKA8pQJx653vXt3UXa5o8fXQeE68xNRbjJ4Z8kCFBUKvHLNfzXFl4gdH23yyrAma1n3arTTiZx5ZL9G8ogmoL8forn7v9SIGVjE/8Ru/wdY6NC0TcIGmXaUYx2u3xZzXPyj8PEYW7/JJ7kfLtfaqb11FjI0Q9RUbWQxrZPOKNtz50+7uGTNPD6m3OnBPQyLJ35zseG80hrcDLKirVgJX1MmuVDFtbRbZ3fVpdf5CED6NEgXyhQOD5iA+++shZPITwqO9tUe4bguoi46VhoI+luUs8ev5l/lq7jdIVHh9aZuHmINv6CAILKh3umKST2jbiwuUZ51Cd/Daqe/w88zGl/hLFYg+mWcesrNIqDXLo+WnGejcZ6atxwxxDCE1ntUidZgWcSQOP+OTHr51Ie7kEaR2mETI/exG/t8yD0ydY+PZL7nvqKEOHJ0lMA1wLnR9CpL+0wqXbw8ZpRv8T/P/vw4N2+C8x8JpOf3Iv0QAAAABJRU5ErkJggg=="
+                        },
+                        "type": "ww-image"
+                    },
+                    "children": {},
+                    "paddings": {},
+                    "uniqueId": 1531989468548.557,
+                    "wwVersion": 3,
+                    "anim": {},
+                    "new": false
+                },
+                "list": []
+            }
+        },
+        {
+            "flipped": false,
+            "front": {
+                "background": {
+                    "data": {},
+                    "link": {
+                        "data": {},
+                        "type": "none"
+                    },
+                    "tags": [],
+                    "ratio": -1,
+                    "hidden": false,
+                    "content": {
+                        "data": {
+                            "backgroundColor": "#ffffff"
+                        },
+                        "type": "ww-color"
+                    },
+                    "children": {},
+                    "paddings": {},
+                    "uniqueId": 1531989468548.8135,
+                    "wwVersion": 3,
+                    "anim": {},
+                    "new": false
+                },
+                "list": [
+                    {
+                        "data": {
+                            "children": {}
+                        },
+                        "link": {
+                            "data": {},
+                            "type": "none"
+                        },
+                        "tags": [],
+                        "ratio": -1,
+                        "hidden": false,
+                        "content": {
+                            "data": {
+                                "tag": "div",
+                                "font": "",
+                                "size": 1,
+                                "text": {
+                                    "en_GB": "<b>BESPOKE SOLUTIONS</b><div><br></div>",
+                                    "fr_FR": "<div data-v-8c355c2c=\"\" style=\"text-align: center;\"><b data-v-8c355c2c=\"\" style=\"text-align: initial;\">Everybody loves the serious.</b></div>"
+                                },
+                                "align": "center",
+                                "color": "",
+                                "classes": [],
+                                "children": []
+                            },
+                            "type": "ww-text"
+                        },
+                        "children": {},
+                        "paddings": {
+                            "xs": {
+                                "top": 0,
+                                "left": 0,
+                                "right": 0,
+                                "bottom": 15
+                            }
+                        },
+                        "uniqueId": 1531989468548.255,
+                        "wwVersion": 3,
+                        "anim": {},
+                        "new": false
+                    },
+                    {
+                        "data": {
+                            "children": {}
+                        },
+                        "link": {
+                            "data": {},
+                            "type": "none"
+                        },
+                        "tags": [],
+                        "ratio": 25,
+                        "hidden": false,
+                        "content": {
+                            "data": {
+                                "alt": {
+                                    "en_GB": "webeo",
+                                    "fr_FR": ""
+                                },
+                                "url": "https://wewebapp.s3.eu-west-3.amazonaws.com/designs/19/sections/VVlozRQaUqFJiz8e2e4cFil7J7a6E1pJ.jpg",
+                                "zoom": 0.3877047172392136,
+                                "hover": {
+                                    "name": "",
+                                    "options": {}
+                                },
+                                "ratio": -1,
+                                "classes": [],
+                                "imgSize": {
+                                    "h": 700,
+                                    "w": 700
+                                },
+                                "position": {
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "borderColor": "",
+                                "filterGradient": null,
+                                "style": {},
+                                "dataUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAUCAYAAABF5ffbAAAAI0lEQVQoU2NkwAIYh5qgl5fn/23btoPdDXc8VkFknw0VbwIAkhgIFXH0mj4AAAAASUVORK5CYII="
+                            },
+                            "type": "ww-image"
+                        },
+                        "children": {},
+                        "paddings": {},
+                        "uniqueId": 1531989468548.9983,
+                        "wwVersion": 3,
+                        "anim": {},
+                        "new": false
+                    },
+                    {
+                        "data": {
+                            "children": {}
+                        },
+                        "link": {
+                            "data": {},
+                            "type": "none"
+                        },
+                        "tags": [],
+                        "ratio": -1,
+                        "hidden": false,
+                        "content": {
+                            "data": {
+                                "tag": "div",
+                                "font": "Raleway Light",
+                                "size": 1,
+                                "text": {
+                                    "en_GB": "<div><br></div><div>We craft solutions to satisfy your objectives: from stand-alone websites to the implementation of the technology within your teams.</div><div></div><div><br></div><div><br></div><div><br></div>",
+                                    "fr_FR": "<div data-v-8c355c2c=\"\" style=\"text-align: center;\">Be like everybody.</div>"
+                                },
+                                "align": "center",
+                                "color": "",
+                                "classes": [],
+                                "children": []
+                            },
+                            "type": "ww-text"
+                        },
+                        "children": {},
+                        "paddings": {
+                            "lg": {
+                                "top": 30,
+                                "left": 30,
+                                "right": 30,
+                                "bottom": 50
+                            },
+                            "md": {
+                                "top": 0,
+                                "left": 30,
+                                "right": 30,
+                                "bottom": 0
+                            },
+                            "sm": {
+                                "top": 0,
+                                "left": 30,
+                                "right": 30,
+                                "bottom": 0
+                            },
+                            "xs": {
+                                "top": 0,
+                                "left": 40,
+                                "right": 40,
+                                "bottom": 0
+                            }
+                        },
+                        "uniqueId": 1531989468548.057,
+                        "wwVersion": 3,
+                        "anim": {},
+                        "new": false
+                    }
+                ]
+            },
+            "back": {
+                "background": {
+                    "data": {},
+                    "link": {
+                        "data": {},
+                        "type": "none"
+                    },
+                    "tags": [],
+                    "ratio": 100,
+                    "hidden": false,
+                    "content": {
+                        "data": {
+                            "alt": {
+                                "en_GB": "webeo",
+                                "fr_FR": ""
+                            },
+                            "url": "https://wewebprod.s3.eu-west-1.amazonaws.com/designs/19/sections/f7gI8HXu4bnRpeKUsjmfpCxcieK8P2Vv.gif",
+                            "zoom": -1,
+                            "hover": {
+                                "name": "",
+                                "options": {}
+                            },
+                            "ratio": -1,
+                            "classes": [],
+                            "imgSize": {
+                                "h": 270,
+                                "w": 480
+                            },
+                            "position": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "borderColor": "",
+                            "filterGradient": null,
+                            "style": {},
+                            "dataUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAADC0lEQVQ4T9WUy24bZQBGzz/3eDxjj+3YuTi3Ki2JKqJIqO26lAVQFlH7Ckgs+kK8AUJiRRfdsECAhIqgQeollSBRmjQ3t3bGM7bn5vl/pD5DF/R7gLP4dHQE73niPfP4AIA71+fVKJtSKlB5RjiccJ6U7NxYo7vUodpewKu3SNOU775/yO1Vly9vdrAMgeW7pHFOFo+J3sScnCeInc2OytAoppI3gyFnYUrNtbm7vYRlGlhBE6fqUW+2+PW3x8ymIVtNgytLHqZtkCSSt+OSUSqZFCDurwfqNINsKomiEYNUsjlb4VrHo5dMmfVnULpBIQUVz+Xw5T73rtW5slBB03T6w4zdS0EkBZfjDPHZWqBSDHRNcHo+YFxItuZdXMug2mzQch2cRoOD1z0aNZfHf+7xxYrLqqeRl4Lng5JxxaOQJYZtIb5adFRuzRAXksFwgq3BZtul6lg41Qpnb2O6a0s0Oy2KLOPRz39xs2GTxyOkEMR+gDnjAAKh64gfdtbUT896DDLJWSYZ55KNdpWgYjBMS5RpsbxxlVEUUZYlu3tHbPs6F5djXEdHWQ65X+eoF+LbBuLH+yvqxX7E+TAjlPBLL+NW1yOomITJFGmY1Gab2N4Mg8sRB68u2KqbnIYTVj2bZrvO034Klk1RlIhvby+q/UgRGhZ7hz2e9ibc/SigZmlEyRRh2TSXF5Gaxh/PDhkNR3w6V2GlqlMKHSXg2HAJhcHBaYj45uOWOi4tFhZb7P9zzMvXl6zXTXxbQyne/WL6PnbF5cn+GUmaMe876GXJreUGTdckcxyO45J/LyLEvTlT7YZTqn4VX1fo05wwK+nM6FiW+U4Zu1YjaPj8/vyISZJRypJCwY2lgM8XHOJcMZKCFyOF+Lprq5NccpJD3dbpxTn9TNKu6FzfWKcaBDTn5jAMg36c8PeTXaZ5hlSK7abDnUUTXSl6YY5ddxEPPumqs7TkVT+mHyVMpaLIJcLUsHQdz9ZY684SR2NSpXF1tYPvV5ESijyjXcbcWfeJ+0NMy/gQavO/D+x/OxBh3AXswLEAAAAASUVORK5CYII="
+                        },
+                        "type": "ww-image"
+                    },
+                    "children": {},
+                    "paddings": {},
+                    "uniqueId": 1531989468548.0637,
+                    "wwVersion": 3,
+                    "anim": {},
+                    "new": false
+                },
+                "list": []
+            }
+        }
+    ]
+}

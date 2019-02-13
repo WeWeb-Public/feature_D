@@ -77,7 +77,7 @@
 
 <script>
 export default {
-    name: "feature_D",
+    name: "__COMPONENT_NAME__",
     props: {
         sectionCtrl: Object
     },
