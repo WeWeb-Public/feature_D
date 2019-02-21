@@ -39,7 +39,7 @@
             </div>
             <div class="card-container container">
                 <div class="card-column" v-for="(card, index) of section.data.cards" :key="index">
-                    <div class="card-outter" @click="wwOnClickCard(index, $event)" @mousemove="wwOnMousemove(index, $event)" @mouseout="wwOnMouseout(index, $event)" v-bind:class="'card-' + (index+1)">
+                    <div class="card-outter" @mousemove="wwOnMousemove(index, $event)" @mouseout="wwOnMouseout(index, $event)" v-bind:class="'card-' + (index+1)">
                         <div class="card-string"></div>
                         <div class="card">
                             <div class="card-content front">
@@ -49,7 +49,7 @@
                                     <wwObject v-for="wwObject in card.front.list" :key="wwObject.uniqueId" v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
                                 </wwLayoutColumn>
 
-                                <div class="handle-container">
+                                <div class="handle-container" @click="wwOnClickCard(index, $event)">
                                     <div class="handle" :style="section.data.handleGradient">
                                         <div class="handle-pulse handle-pulse-1"></div>
                                         <div class="handle-pulse handle-pulse-2"></div>
@@ -64,6 +64,14 @@
                                 <wwLayoutColumn tag="div" ww-default="ww-image" v-bind:ww-list="card.back.list" class="ww-object-container" @ww-add="add(card.back.list, $event)" @ww-remove="remove(card.back.list, $event)">
                                     <wwObject v-for="wwObject in card.back.list" :key="wwObject.uniqueId" v-bind:ww-object="wwObject" ww-default-object-type="ww-text"></wwObject>
                                 </wwLayoutColumn>
+
+                                <div class="handle-container" @click="wwOnClickCard(index, $event)">
+                                    <div class="handle" :style="section.data.handleGradient">
+                                        <div class="handle-pulse handle-pulse-1"></div>
+                                        <div class="handle-pulse handle-pulse-2"></div>
+                                        <div class="handle-pulse handle-pulse-3"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -352,7 +360,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
 .feature_D {
     position: relative;
 }
@@ -481,21 +489,46 @@ export default {
     width: 50px;
     height: 50px;
     position: absolute;
-    right: 0;
     bottom: 0;
     overflow: hidden;
     z-index: 1;
     pointer-events: all;
 }
 
+.front {
+    .handle-container {
+        right: 0;
+        .handle {
+            border-radius: 20px 100%;
+            left: 0;
+
+            .handle-pulse {
+                left: 25%;
+            }
+        }
+    }
+}
+
+.back {
+    .handle-container {
+        left: 0;
+        .handle {
+            border-radius: 100% 20px;
+            right: 0;
+
+            .handle-pulse {
+                left: 75%;
+            }
+        }
+    }
+}
+
 .feature_D .handle {
     cursor: pointer;
     width: 100px;
     height: 100px;
-    border-radius: 20px 100%;
     position: absolute;
     top: 0;
-    left: 0;
     background: #20acfb; /* Old browsers */
     background: -moz-linear-gradient(
         -45deg,
