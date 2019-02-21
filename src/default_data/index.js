@@ -1,20 +1,11 @@
 module.exports = [
     {
-        name: 'lol',
+        name: 'featureAnimated',
         storeName: {
-            en_GB: "The lol section"
+            en_GB: "Feature Animated"
         },
         storeDesc: {
-            en_GB: "Use in lol conditions only.😜"
+            en_GB: "Display animated cards"
         }
-    },
-    {
-        name: 'serious',
-        storeName: {
-            en_GB: "The Serious Section"
-        },
-        storeDesc: {
-            en_GB: "Use in serious conditions only.😐"
-        },
     }
 ]
